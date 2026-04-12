@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include <list>
+#include <algorithm>
 #include "Goat.h"
 using namespace std;
 
@@ -11,6 +12,16 @@ int select_goat(list<Goat> trip);
 void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string [], string []);
 void display_trip(list<Goat> trip);
+
+void sort_goats(list<Goat> &trip); //1
+void reverse_trip(list<Goat> &trip);
+void remove_duplicates(list<Goat> &trip);
+void count_by_color(list<Goat> trip);
+void find_oldest_goat(list<Goat> trip);
+void find_goats_older_than(list<Goat> trip);
+void move_first_to_back(list<Goat> &trip);
+void clear_trip(list<Goat> &trip); //8
+
 int main_menu();
 
 int main() {
