@@ -81,19 +81,24 @@ int main() {
 }
 
 int main_menu() {
+    int main_menu() {
     cout << "*** GOAT MANAGER 3001 ***\n";
-    cout << "[1] Add a goat\n";
-    cout << "[2] Delete a goat\n";
+    cout << "[1] Add goat\n";
+    cout << "[2] Delete goat\n";
     cout << "[3] List goats\n";
-    cout << "[4] Quit\n";
-    cout << "Choice --> ";
-    int choice;
-    cin >> choice;
-    while (choice < 1 || choice > 4) {
-        cout << "Invalid, again --> ";
-        cin >> choice;
-    }
+    cout << "[4] Sort goats by name\n";
+    cout << "[5] Reverse trip\n";
+    cout << "[6] Remove dupl icate goats\n";
+    cout << "[7] Count goat by color\n";
+    cout << "[8] Find oldest goat\n";
+    cout << "[9] Find goats older than an age\n" ;
+    cout << "[10] Move first goat to back\n" ;
+    cout << "[11] Clear all goats\n";
+    cout << "[12] Quit\n";
+    cout << "Choice -->";
+
     return choice;
+}
 }
 
 void delete_goat(list<Goat> &trip) {
