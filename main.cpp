@@ -55,7 +55,7 @@ int main() {
     
     // Goat Manager 3001 Engine
     int sel = main_menu();
-    while (sel != 4) {
+    while (sel != 12) {
         switch (sel) {
             case 1:
                 cout << "Adding a goat.\n";
@@ -69,6 +69,44 @@ int main() {
                 cout << "Displaying goat data.\n";
                 display_trip(trip);
                 break;
+            case 4:
+                cout << "Sorting goats by name.\n";
+                sort_goats(trip);
+                display_trip(trip);
+                break;
+            case 5:  
+                cout << "Reversing trip.\n";
+                reverse_trip(trip);
+                display_trip(trip);
+                break;
+            case 6:
+                cout << "Removing duplicate goats.\n";
+                remove_duplicates(trip);
+                display_trip(trip);
+                break;
+            case 7:
+                cout << "Counting goats by color.\n";
+                count_by_color(trip);
+                break;
+            case 8:
+                cout << "Finding oldest goat.\n";
+                find_oldest_goat(trip);
+                break;
+            case 9:
+                cout << "Finding goats older than an age.\n";
+                find_goats_older_than(trip);
+                break;
+            case 10:
+                cout << "Moving first goat to back.\n";
+                move_first_to_back(trip);
+                display_trip(trip);
+                break;
+            case 11:
+                cout << "Clearing all goats.\n";
+                clear_trip(trip);
+                break;
+                
+            
             default:
                 cout << "Invalid selection.\n";
                 break;
@@ -142,3 +180,11 @@ int select_goat(list<Goat> trp) {
     }
     return input;
 }
+
+// Milestone 1
+void sort_goats(list<Goat> &trip) {
+    cout << "SORT GOATS BY NAME\n";
+    trip.sort();
+    cout << "Trip sorted by name.\n";
+}
+
