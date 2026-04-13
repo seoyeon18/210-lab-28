@@ -194,3 +194,11 @@ void reverse_trip(list<Goat> &trip) {
     trip.reverse();
     cout << "Trip reversed.\n";
 }
+
+// Milestone 3
+void remove_duplicates(list<Goat> &trip) {
+    cout << "REMOVE DUPLICATE GOATS\n";
+    trip.sort();
+    trip.unique();
+    cout << "Duplicate goats removed.\n";
+}
