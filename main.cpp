@@ -202,3 +202,35 @@ void remove_duplicates(list<Goat> &trip) {
     trip.unique();
     cout << "Duplicate goats removed.\n";
 }
+
+
+// Milestone 4
+void count_by_color(list<Goat> trip) {
+    cout << "COUNT GOATS BY COLOR\n";
+    string color;
+    cout << "Enter color --> ";
+    cin >> color;
+
+    int count = count_if(trip.begin(), trip.end(),
+        [color](Goat g) {
+            return g.get_color() == color;
+        });
+
+    cout << "Number of goats with color " << color << ": " << count << endl;
+}
+
+// Milestone 5
+void find_oldest_goat(list<Goat> trip) {
+    cout << "FIND OLDEST GOAT\n";
+
+    if (trip.empty()) {
+        cout << "No goats in the trip.\n";
+        return;
+    }
+
+    auto it = max_element(trip.begin(), trip.end(),
+        [](Goat a, Goat b) {
+            return a.get_age() < b.get_age();
+        });
+
+}
