@@ -234,3 +234,26 @@ void find_oldest_goat(list<Goat> trip) {
         });
 
 }
+
+
+// Milestone 6
+void find_goats_older_than(list<Goat> trip) {
+    cout << "FIND GOATS OLDER THAN AN AGE\n";
+    int age;
+    cout << "Enter age --> ";
+    cin >> age;
+
+    bool found = false;
+    for (auto gt : trip) {
+        if (gt.get_age() > age) {
+            cout << gt.get_name()
+                 << " (" << gt.get_age()
+                 << ", " << gt.get_color() << ")\n";
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout << "No goats found older than " << age << ".\n";
+    }
+}
