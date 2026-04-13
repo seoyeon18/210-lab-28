@@ -188,3 +188,9 @@ void sort_goats(list<Goat> &trip) {
     cout << "Trip sorted by name.\n";
 }
 
+// Milestone 2
+void reverse_trip(list<Goat> &trip) {
+    cout << "REVERSE TRIP\n";
+    trip.reverse();
+    cout << "Trip reversed.\n";
+}
