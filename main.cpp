@@ -257,3 +257,17 @@ void find_goats_older_than(list<Goat> trip) {
         cout << "No goats found older than " << age << ".\n";
     }
 }
+
+
+// Milestone 7
+void move_first_to_back(list<Goat> &trip) {
+    cout << "MOVE FIRST GOAT TO BACK\n";
+
+    if (trip.empty()) {
+        cout << "No goats in the trip.\n";
+        return;
+    }
+
+    trip.splice(trip.end(), trip, trip.begin());
+    cout << "First goat moved to back.\n";
+}
