@@ -271,3 +271,10 @@ void move_first_to_back(list<Goat> &trip) {
     trip.splice(trip.end(), trip, trip.begin());
     cout << "First goat moved to back.\n";
 }
+
+// Milestone 8
+void clear_trip(list<Goat> &trip) {
+    cout << "CLEAR ALL GOATS\n";
+    trip.clear();
+    cout << "All goats removed. Trip size: " << trip.size() << endl;
+}
